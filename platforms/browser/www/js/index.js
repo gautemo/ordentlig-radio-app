@@ -1,7 +1,7 @@
 const app = {
     playButton: null,
     isPlaying: false,
-    audio: new Audio('http://mms-live.online.no/oradio_mp3_m'),
+    audio: null,
     isToggling: false,
     currentDisplayed: '',
 
@@ -36,13 +36,18 @@ const app = {
     },
 
     stopRadio: function () {
+        //this.audio.stop();
+        //this.audio.release();
         this.audio.pause();
+        this.audio = null;
         document.querySelector('.stop-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.play-symbol').classList.remove('hidden'), 500);
         document.querySelector('.waveHorizontals').classList.remove('playing');
     },
 
     playRadio: function () {
+        //this.audio = new Media('http://mms-live.online.no/oradio_mp3_m', () => {}, () => alert('Kunne ikke hente radio kanal'));
+        this.audio = new Audio('http://mms-live.online.no/oradio_mp3_m');
         this.audio.play();
         document.querySelector('.play-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.stop-symbol').classList.remove('hidden'), 500);
