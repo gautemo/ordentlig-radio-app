@@ -13,13 +13,19 @@
 
 <body>
     <div class="app">
-        <div class="top"></div>
+        <div class="top">
+            <img src="img/logo.png" />
+        </div>
+        <div class="waveHorizontals">
+            <div id="waveHorizontal1" class="waveHorizontal"></div>
+            <div id="waveHorizontal2" class="waveHorizontal"></div>
+            <div id="waveHorizontal3" class="waveHorizontal"></div>
+        </div>
         <div class="play-section">
-            <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path class="shape" d="M8 5v14l11-7z" />
-                    <path class="outside" d="M0 0h24v24H0z" fill="none" /></svg>
-            </button>
+            <div class="play-button">
+                <img class="play-symbol" src="img/round-play_arrow-24px.svg" />
+                <img class="stop-symbol hidden" src="img/round-stop-24px.svg" />
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
