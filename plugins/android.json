@@ -7,16 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-media": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "no.ordentligradio.app"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-nativeaudio": {
       "PACKAGE_NAME": "no.ordentligradio.app"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "no.ordentligradio.app"
-    }
-  }
+  "dependent_plugins": {}
 }

@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "HelloCordova",
-  "short_name": "HelloCordova",
-  "version": "io.cordova.hellocordova",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "name": "Ordentlig Radio",
+  "short_name": "Ordentlig Radio",
+  "version": "no.ordentligradio.app",
+  "description": "Ordentlig Radio app.",
+  "author": "Gaute Meek Olsen",
   "icons": [],
   "start_url": "index.html"
 }

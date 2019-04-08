@@ -7,17 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-media": {
-      "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-nativeaudio": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
-    }
-  }
+  "dependent_plugins": {}
 }
