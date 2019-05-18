@@ -9,25 +9,11 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
-    "cordova-plugin-nativeaudio": {
-      "PACKAGE_NAME": "no.ordentligradio.app"
     }
   },
   "dependent_plugins": {},
-  "modules": [
-    {
-      "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio-browser.js",
-      "id": "cordova-plugin-nativeaudio.NativeAudioBrowser",
-      "pluginId": "cordova-plugin-nativeaudio",
-      "clobbers": [
-        "cordova.plugins.NativeAudio",
-        "plugins.NativeAudio"
-      ]
-    }
-  ],
+  "modules": [],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-nativeaudio": "3.0.9"
+    "cordova-plugin-whitelist": "1.3.3"
   }
 }

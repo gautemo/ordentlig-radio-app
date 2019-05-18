@@ -36,22 +36,47 @@ const app = {
     },
 
     stopRadio: function () {
-        //this.audio.stop();
-        //this.audio.release();
-        this.audio.pause();
-        this.audio = null;
+        this.stopWithPlugin();
+        //this.stopWithHTMLAudio();
         document.querySelector('.stop-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.play-symbol').classList.remove('hidden'), 500);
         document.querySelector('.waveHorizontals').classList.remove('playing');
     },
 
     playRadio: function () {
-        //this.audio = new Media('http://mms-live.online.no/oradio_mp3_m', () => {}, () => alert('Kunne ikke hente radio kanal'));
-        this.audio = new Audio('http://mms-live.online.no/oradio_mp3_m');
-        this.audio.play();
+        this.playWithPlugin();
+        //this.playWithHTMLAudio();
         document.querySelector('.play-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.stop-symbol').classList.remove('hidden'), 500);
         document.querySelector('.waveHorizontals').classList.add('playing');
+    },
+
+    playWithHTMLAudio: function () {
+        this.audio = new Audio('http://mms-live.online.no/oradio_mp3_m');
+        this.audio.play();
+    },
+
+    stopWithHTMLAudio: function () {
+        this.audio.pause();
+        this.audio = null;
+    },
+
+    playWithPlugin: function () {
+        if (window.plugins && window.plugins.NativeAudio) {
+            window.plugins.NativeAudio.preloadComplex('radio', 'http://mms-live.online.no/oradio_mp3_m', 1, 1, 0, function (msg) {
+            }, function (msg) {
+                console.log('error: ' + msg);
+            });
+
+            window.plugins.NativeAudio.play('radio');
+        }
+    },
+
+    stopWithPlugin: function () {
+        if (window.plugins && window.plugins.NativeAudio) {
+            window.plugins.NativeAudio.stop('radio');
+            window.plugins.NativeAudio.unload('radio');
+        }
     }
 };
 

@@ -36,16 +36,14 @@ const app = {
     },
 
     stopRadio: function () {
-        this.stopWithPlugin();
-        //this.stopWithHTMLAudio();
+        this.stopWithHTMLAudio();
         document.querySelector('.stop-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.play-symbol').classList.remove('hidden'), 500);
         document.querySelector('.waveHorizontals').classList.remove('playing');
     },
 
     playRadio: function () {
-        this.playWithPlugin();
-        //this.playWithHTMLAudio();
+        this.playWithHTMLAudio();
         document.querySelector('.play-symbol').classList.add('hidden');
         setTimeout(() => document.querySelector('.stop-symbol').classList.remove('hidden'), 500);
         document.querySelector('.waveHorizontals').classList.add('playing');
@@ -60,24 +58,6 @@ const app = {
         this.audio.pause();
         this.audio = null;
     },
-
-    playWithPlugin: function () {
-        if (window.plugins && window.plugins.NativeAudio) {
-            window.plugins.NativeAudio.preloadComplex('radio', 'http://mms-live.online.no/oradio_mp3_m', 1, 1, 0, function (msg) {
-            }, function (msg) {
-                console.log('error: ' + msg);
-            });
-
-            window.plugins.NativeAudio.play('radio');
-        }
-    },
-
-    stopWithPlugin: function () {
-        if (window.plugins && window.plugins.NativeAudio) {
-            window.plugins.NativeAudio.stop('radio');
-            window.plugins.NativeAudio.unload('radio');
-        }
-    }
 };
 
 app.initialize();
