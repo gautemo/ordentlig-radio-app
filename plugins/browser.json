@@ -9,9 +9,6 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
-    "cordova-plugin-nativeaudio": {
-      "PACKAGE_NAME": "no.ordentligradio.app"
     }
   },
   "dependent_plugins": {}

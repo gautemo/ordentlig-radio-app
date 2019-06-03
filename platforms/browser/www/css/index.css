@@ -1,33 +1,34 @@
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    height:100vh;
-    margin:0px;
-    padding:0px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
-    width:100%;
+    width: 100%;
 }
 
 
 /* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {}
 
-}
-
-.app{
+.app {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.top{
+.top {
     flex: 1;
 }
 
-.play-section{
+.play-section {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@ body {
     background: #fcb315;
 }
 
-.play-button{
+.play-button {
     height: 50vw;
     width: 50vw;
     border-radius: 50%;
@@ -49,77 +50,94 @@ body {
     z-index: 5;
 }
 
-.play-button>img{
+.play-button>img {
     height: 80%;
     width: 80%;
     position: absolute;
     transition: all 0.5s ease-in-out;
 }
 
-.play-button>img.hidden{
+.play-button>img.hidden {
     opacity: 0;
     height: 5%;
     width: 5%;
     transform: rotate(90deg);
 }
 
-.top{
+.top {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-img{
+img {
     width: 60vw;
 }
 
-.waveHorizontals{
-	width: 100%;
-	height: 20px;
-	position:relative;
-    overflow:hidden;
-	
-	z-index:1; /* iOS safari */
+.waveHorizontals {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 1;
+    /* iOS safari */
 }
-.waveHorizontal{
-	width: 200%;
-	height: 100%;
-	display: block;
-	position:absolute;
-    left:0; 
-    bottom:0;
-	background-repeat:repeat-x;
-	background-position:left bottom;
-	background-size:350px 100%;
-    transform-origin:0 100% 0;
+
+.waveHorizontal {
+    width: 200%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-size: 350px 100%;
+    transform-origin: 0 100% 0;
 
 }
 
-.waveHorizontals.playing .waveHorizontal{
-	/* animation: move linear infinite; */
-	animation-name:move;
-	animation-timing-function:linear;
-	animation-iteration-count:infinite;
+.waveHorizontals.playing .waveHorizontal {
+    /* animation: move linear infinite; */
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-#waveHorizontal1{
-	background-image:url(../img/wave1.svg);
-	animation-delay: -2s;
-	animation-duration: 12s;	
+#waveHorizontal1 {
+    background-image: url(../img/wave1.svg);
+    animation-delay: -2s;
+    animation-duration: 12s;
 }
-#waveHorizontal2{
-	background-image:url(../img/wave2.svg);
-	animation-delay: -2s;
-	animation-duration: 5s;	
+
+#waveHorizontal2 {
+    background-image: url(../img/wave2.svg);
+    animation-delay: -2s;
+    animation-duration: 5s;
 }
-#waveHorizontal3{
-	background-image:url(../img/wave3.svg);
-	animation-delay: -1s;
-	animation-duration: 3s;
+
+#waveHorizontal3 {
+    background-image: url(../img/wave3.svg);
+    animation-delay: -1s;
+    animation-duration: 3s;
 }
-@keyframes move{
-	0% {		transform: translate(-175px,0px) scale(1,1);}
-	50% {		transform: translate(-87px,0px) scale(1,0.5);}
-	100% {	transform: translate(0px,0px) scale(1,1);}
+
+@keyframes move {
+    0% {
+        transform: translate(-175px, 0px) scale(1, 1);
+    }
+
+    50% {
+        transform: translate(-87px, 0px) scale(1, 0.5);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+#radio {
+    display: none;
 }

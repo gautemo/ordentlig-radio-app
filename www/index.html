@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -22,6 +21,9 @@
             <div id="waveHorizontal3" class="waveHorizontal"></div>
         </div>
         <div class="play-section">
+            <video id="radio" name="media">
+                <source src="http://mms-live.online.no/oradio_mp3_m" type="audio/mpeg">
+            </video>
             <div class="play-button">
                 <img class="play-symbol" src="img/round-play_arrow-24px.svg" />
                 <img class="stop-symbol hidden" src="img/round-stop-24px.svg" />
