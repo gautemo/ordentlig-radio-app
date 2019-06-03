@@ -20,6 +20,7 @@ const app = {
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
+        this.audio = document.querySelector('#radio');
         this.playButton = document.querySelector('.play-button');
         this.playButton.addEventListener('click', () => {
             if (!this.isToggling) {
@@ -50,13 +51,11 @@ const app = {
     },
 
     playAudio: function () {
-        this.audio = document.querySelector('#radio');
         this.audio.play();
     },
 
     stopAudio: function () {
-        this.audio = document.querySelector('#radio');
-        this.audio.stop();
+        this.audio.pause();
     }
 };
 
